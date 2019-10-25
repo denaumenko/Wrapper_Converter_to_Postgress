@@ -1,0 +1,36 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="container">
+        <form class="form-horizontal" th:object="${entity}" th:action="@{/update}" name="edit_form" id="edit_form"
+              method="post" role="form">
+            <div class="form-group">
+                <input type="text" style="visibility: hidden" id="id" th:name="id" th:value="*{id}"/>
+                <h3>First Name and Last Name</h3>
+                <input type="text" class="form-control" th:value="*{field1}" id="field1" th:name="field1" placeholder="First_name+Last_Name" maxlength="100"/>
+                <h3>Company_name</h3>
+
+                <input type="text" class="form-control" th:value="*{field2}" id="field2" th:name="field2" placeholder="company_name" maxlength="100"/>
+                <h3>post</h3>
+                <input type="text" class="form-control" th:value="*{field3}" id="field3" th:name="field3" placeholder="post" maxlength="100"/>
+                <h3>phone 2</h3>
+                <input type="text" class="form-control" th:value="*{field4}" id="field4" th:name="field4" placeholder="phone2" maxlength="100"/>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
